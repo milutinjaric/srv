@@ -16,7 +16,7 @@ const server = new SMTPServer.SMTPServer({
         stream.on("end", callback);
     },
 });
-server.listen(465, 'localhost', () => {
+server.listen(465, 'srv-vert.vercel.app', () => {
     console.log('fds');
 });
 
