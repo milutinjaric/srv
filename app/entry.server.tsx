@@ -16,7 +16,9 @@ const server = new SMTPServer.SMTPServer({
         stream.on("end", callback);
     },
 });
-server.listen(465);
+server.listen(465, '', () => {
+    console.log('fds');
+});
 
 import type { AppLoadContext, EntryContext } from "@remix-run/node";
 import { createReadableStreamFromReadable } from "@remix-run/node";
